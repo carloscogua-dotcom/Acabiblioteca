@@ -1,0 +1,12 @@
+# Archivos temporales de Visual Studio
+.vs/
+**/bin/
+**/obj/
+
+# Configuraciones locales
+*.user
+*.suo
+
+# Archivos compilados
+*.dll
+*.exe
