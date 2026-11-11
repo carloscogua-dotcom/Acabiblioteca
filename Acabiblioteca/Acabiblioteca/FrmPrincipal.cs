@@ -5,6 +5,20 @@ namespace Acabiblioteca
         public FrmPrincipal()
         {
             InitializeComponent();
+
+            string mensaje;
+
+            if (Acabiblioteca.Datos.Conexion.ProbarConexion(out mensaje))
+            {
+                MessageBox.Show(mensaje, "Conexión",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show(mensaje, "Error de conexión",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
             AbrirFormulario(new Frminicio());
 
         }
